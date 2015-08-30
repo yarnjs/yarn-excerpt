@@ -1,0 +1,14 @@
+{
+  "name": "yarn-excerpt",
+  "version": "0.5.0",
+  "description": "yarn plugin for excerpt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harry Wolff <hello@hswolff.com> (http://hswolff.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.19.0"
+  }
+}
