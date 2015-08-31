@@ -1,3 +1,3 @@
-# yarn-html-minifier
+# yarn-excerpt
 
-yarn plugin for html-minifier
+yarn plugin for creating a post excerpt 
