@@ -4,7 +4,7 @@ module.exports = function(Plugin) {
   Plugin.event.file.beforeRender(function(file) {
     if (file.collectionIds.has('post')) {
       var $ = cheerio.load(file.data.content);
-      var p = $('p').first();
+      var p = $('p').first().contents();
       file.data.excerpt = $.html(p).trim();
     }
   });
