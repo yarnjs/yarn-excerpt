@@ -1,3 +1,3 @@
-# yarn-excerpt
+# reptar-excerpt
 
-yarn plugin for creating a post excerpt 
+reptar plugin for creating a post excerpt 

@@ -1,7 +1,7 @@
 {
-  "name": "yarn-excerpt",
+  "name": "reptar-excerpt",
   "version": "0.7.0",
-  "description": "yarn plugin for excerpt",
+  "description": "reptar plugin for excerpt",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
