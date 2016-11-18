@@ -8,18 +8,14 @@ module.exports = function(Plugin, options) {
       var $ = cheerio.load(renderedFile);
       var p = $('p').first().contents();
 
-      if (fd[options.excerptKey]) {
-        fd.excerpt = fd[options.excerptKey];
-      } else {
-        // Clean text, or html enhanced text
-        options.textOnly ?
-          fd.excerpt = $.text(p).trim():
-          fd.excerpt = $.html(p).trim();
+      // Clean text, or html enhanced text
+      options.textOnly ?
+        fd.excerpt = $.text(p).trim():
+        fd.excerpt = $.html(p).trim();
 
-        // Limits the excerpt length to your specified amount
-        if (options.charLimit && fd.excerpt.length > options.charLimit) {
-          fd.excerpt = fd.excerpt.substring(0, options.charLimit - 3) + "...";
-        }
+      // Limits the excerpt length to your specified amount
+      if (options.charLimit && fd.excerpt.length > options.charLimit) {
+        fd.excerpt = fd.excerpt.substring(0, options.charLimit - 3) + "...";
       }
     }
   });
