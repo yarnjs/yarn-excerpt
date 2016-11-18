@@ -1,12 +1,8 @@
 # reptar-excerpt
 A Reptar plugin for creating a post excerpt.
 
-This plugin comes with some additional features listed below:
-* Toggle between html enhanced excerpts or plain text excerpts.
-* Limit the length of your excerpts.
-
-### How to use the different plugin options
-In your _config.yml file you should already have a part with looks like the following:
+### Default plugin configuration
+In your project's _config.yml file you should already have a part with looks like the following:
 
 ```
 plugins:
@@ -17,7 +13,7 @@ plugins:
       charLimit: false
 ```
       
-If you don't, then just add the above configuration to the bottom of your _config.yml file.
+If you don't, then just add the above configuration to the bottom of your _config.yml file. This will let you make use of the plugin in your project.
 
 ### Plugin options explained
 `enabled: true`  
