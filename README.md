@@ -21,11 +21,11 @@ If you don't, then just add the above configuration to the bottom of your _confi
 
 ### Plugin options explained
 `enabled: true`  
-This part toggles the plugin on or off. Simplt set the value to `true` or `false`.
+This part toggles the plugin on or off. Simply set the value to `true` (on) or `false` (off).
 
 `textOnly: false`  
-This option lets you either use html enhanced excerpts (meaning all links, bold, italicized, etc will be there) by setting the value for `false`. Or you can use plain text in your excerpt by using the value `true`.
+This option lets you either use html enhanced excerpts (meaning links, boldness, italicization, and so on will be there) by setting the value to `false`. You can use plain text in your excerpt by changing the value to `true`.
 
 `charLimit: false`  
-This option can limit your excerpt length to your specified amount of characters. Use the value `false` to disable it or a number value such as `250` to set a limit.
+This option can limit your excerpt length to your specified amount of characters. Use the value `false` to disable it or a number value such as `250` to set a max limit.
 Example: `charLimit: 250`.
