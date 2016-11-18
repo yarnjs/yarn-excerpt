@@ -8,8 +8,8 @@ module.exports = function(Plugin, options) {
       var $ = cheerio.load(renderedFile);
       var p = $('p').first().contents();
 
-      if (fd[options.customExcerpt]) {
-        fd.excerpt = fd[options.customExcerpt];
+      if (fd[options.excerptKey]) {
+        fd.excerpt = fd[options.excerptKey];
       } else {
         // Clean text, or html enhanced text
         options.textOnly ?
