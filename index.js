@@ -1,22 +1,26 @@
-var cheerio = require('cheerio');
+const cheerio = require('cheerio');
 
-module.exports = function(Plugin, options) {
-  Plugin.event.file.afterRender(function(file, renderedFile) {
+module.exports = function excerptMiddleware(options) {
+  options = options || {};
 
-    if (file && renderedFile) {
-      let fd = file.data;
-      var $ = cheerio.load(renderedFile);
-      var p = $('p').first().contents();
+  return (reptar) => {
+    for (const fileKey in reptar.destination) {
+      const file = reptar.destination[fileKey];
+      const renderedFile = reptar.renderer.renderMarkdown(file.data.content);
+
+      const $ = cheerio.load(renderedFile);
+      const p = $('p').first().contents();
 
       // Clean text, or html enhanced text
-      options.textOnly ?
-        fd.excerpt = $.text(p).trim():
-        fd.excerpt = $.html(p).trim();
+      file.data.excerpt = options.textOnly ?
+        $.text(p).trim() :
+        $.html(p).trim();
 
       // Limits the excerpt length to your specified amount
-      if (options.charLimit && fd.excerpt.length > options.charLimit) {
-        fd.excerpt = fd.excerpt.substring(0, options.charLimit - 3) + "...";
+      if (options.charLimit && file.data.excerpt.length > options.charLimit) {
+        const substr = file.data.excerpt.substring(0, options.charLimit - 3);
+        file.data.excerpt = `${substr}...`;
       }
     }
-  });
-};
+  };
+}

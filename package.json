@@ -3,12 +3,10 @@
   "version": "0.8.0",
   "description": "reptar plugin for excerpt",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "repository": "git://github.com/reptar/reptar-excerpt.git",
   "author": "Harry Wolff <hello@hswolff.com> (http://hswolff.com/)",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^0.19.0"
+    "cheerio": "^0.22.0"
   }
 }
